@@ -12,6 +12,7 @@ class CounterApp extends StatelessWidget {
       appBar: AppBar(
         title: Text("Counter App", style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.deepPurple,
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
