@@ -8,3 +8,4 @@ The following topics are covered in this project.
 3. Bottom Sheet Dialog
 4. Route Management
 5. Language Translation
+6. Variable observable (.obs and .obx)
