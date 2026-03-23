@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:getx_demo/screens/text_changes.dart';
 
 import '../screens/screens.dart';
 
@@ -8,4 +9,5 @@ final myPages = [
   GetPage(name: "/contact", page: () => ContactUs(), transition: Transition.upToDown),
   GetPage(name: "/language", page: () => LanguageTranslate(), transition: Transition.upToDown),
   GetPage(name: "/counter", page: () => CounterApp(), transition: Transition.circularReveal),
+  GetPage(name: "/textChange", page: () => TextChanges(), transition: Transition.cupertinoDialog),
 ];

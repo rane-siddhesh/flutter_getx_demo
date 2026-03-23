@@ -55,6 +55,10 @@ class Home extends StatelessWidget {
             ElevatedButton(onPressed: () {
               Get.toNamed("/counter");
             }, child: Text("Counter App - GetX Observable")),
+            SizedBox(height: 15),
+            ElevatedButton(onPressed: () {
+              Get.toNamed("/textChange");
+            }, child: Text("Text Change - GetX Observable")),
           ],
         ),
       ),
