@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_demo/components/languages.dart';
 import 'package:getx_demo/screens/home.dart';
 
 import 'components/routes.dart';
@@ -20,6 +21,9 @@ class MyApp extends StatelessWidget {
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
       getPages: myPages,
+      locale: Locale('en'),
+      fallbackLocale: Locale('en'),
+      translations: Languages(),
       home: const Home(),
     );
   }

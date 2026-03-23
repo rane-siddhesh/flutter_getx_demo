@@ -47,6 +47,10 @@ class Home extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 15),
+            ElevatedButton(onPressed: () {
+              Get.toNamed("/language");
+            }, child: Text("Language Translate")),
           ],
         ),
       ),
