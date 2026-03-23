@@ -46,6 +46,7 @@ class TextChanges extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
               ),
             ),
+            SizedBox(height: 20,),
             Container(
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
