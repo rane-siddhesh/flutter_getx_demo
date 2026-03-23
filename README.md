@@ -7,3 +7,4 @@ The following topics are covered in this project.
 2. Dialog
 3. Bottom Sheet Dialog
 4. Route Management
+5. Language Translation
