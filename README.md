@@ -1,6 +1,6 @@
 # Flutter GetX Demo 
 
-![A remote image](https://media.licdn.com/dms/image/v2/D4D12AQHh0sYC…eta&t=nqr18b9kkUvGvmu84p7eIn6huvHyKvRbdrksOq9Wayo)
+![A remote image](https://cdn.hashnode.com/res/hashnode/image/upload/v1652943873496/muncX_zmz.png)
 
 The following topics are covered in this project.
 1. Snackbar
