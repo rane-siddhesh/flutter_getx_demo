@@ -22,12 +22,42 @@ class Home extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: showSnackBar,
-              child: Text("Show SnackBar"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.purple,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: Text(
+                "Show SnackBar",
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             SizedBox(height: 15),
-            ElevatedButton(onPressed: displayDialog, child: Text("Show Dialog")),
+            ElevatedButton(
+              onPressed: displayDialog,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.purple,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: Text("Show Dialog", style: TextStyle(color: Colors.white)),
+            ),
             SizedBox(height: 15),
-            ElevatedButton(onPressed: displayBottomSheetDialog, child: Text("Show BottomSheet Dialog")),
+            ElevatedButton(
+              onPressed: displayBottomSheetDialog,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.purple,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: Text(
+                "Show BottomSheet Dialog",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
             SizedBox(height: 15),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -37,28 +67,95 @@ class Home extends StatelessWidget {
                     // Get.to(AboutUs());
                     Get.toNamed("/about");
                   },
-                  child: Text("About Us"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Text(
+                    "About Us",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: () {
                     Get.toNamed("/contact");
                   },
-                  child: Text("Contact Us"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.purple,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                  child: Text(
+                    "Contact Us",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ],
             ),
             SizedBox(height: 15),
-            ElevatedButton(onPressed: () {
-              Get.toNamed("/language");
-            }, child: Text("Language Translate")),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed("/language");
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.purple,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: Text(
+                "Language Translate",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
             SizedBox(height: 15),
-            ElevatedButton(onPressed: () {
-              Get.toNamed("/counter");
-            }, child: Text("Counter App - GetX Observable")),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed("/counter");
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.purple,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: Text(
+                "Counter App - GetX Observable",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
             SizedBox(height: 15),
-            ElevatedButton(onPressed: () {
-              Get.toNamed("/textChange");
-            }, child: Text("Text Change - GetX Observable")),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed("/textChange");
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.purple,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: Text(
+                "Text Change - GetX Observable",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+            SizedBox(height: 15),
+            ElevatedButton(
+              onPressed: () {
+                Get.toNamed("/todo");
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.purple,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                ),
+              ),
+              child: Text("ToDo App", style: TextStyle(color: Colors.white)),
+            ),
           ],
         ),
       ),
