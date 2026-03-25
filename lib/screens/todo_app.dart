@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_demo/repo/to_do_repo.dart';
@@ -5,12 +7,13 @@ import 'package:getx_demo/repo/to_do_repo.dart';
 class TodoApp extends StatelessWidget {
   const TodoApp({super.key});
 
-  void showDialog(String action) {
+  void showDialog(String action, ToDoRepo todoRepo) {
+    final textController = TextEditingController();
     Get.defaultDialog(
       title: action == "new" ? "New Task" : "Update Task",
       content: TextFormField(
         decoration: InputDecoration(hintText: "Task"),
-        // controller: textController,
+        controller: textController,
       ),
       actions: [
         OutlinedButton(
@@ -21,6 +24,7 @@ class TodoApp extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
+            todoRepo.addTask(json.encode({"title": textController.text}));
             Get.back();
           },
           style: ElevatedButton.styleFrom(
@@ -42,7 +46,7 @@ class TodoApp extends StatelessWidget {
       appBar: AppBar(title: Text("ToDo App")),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          showDialog("new");
+          showDialog("new", todoRepo);
         },
         backgroundColor: Colors.black,
         child: Icon(Icons.add, color: Colors.white),
@@ -81,7 +85,7 @@ class TodoApp extends StatelessWidget {
                           children: [
                             IconButton(
                               onPressed: (){
-                                showDialog("update");
+                                showDialog("update", todoRepo);
                               },
                               icon: Icon(Icons.edit, color: Colors.white),
                             ),
@@ -101,6 +105,7 @@ class TodoApp extends StatelessWidget {
                                     ElevatedButton(
                                       onPressed: () {
                                         Get.back();
+                                        todoRepo.deleteTask(e.id!);
                                       },
                                       style: ElevatedButton.styleFrom(
                                         backgroundColor: Colors.deepPurple,

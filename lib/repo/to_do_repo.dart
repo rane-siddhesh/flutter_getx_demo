@@ -20,4 +20,15 @@ class ToDoRepo extends GetxController {
     }
     return toDoList;
   }
+
+  Future<void> addTask(String data) async{
+    print("Inside addTask");
+    final response = await _api.postApi("https://69c19e25085e1a9fae417d33.mockapi.io/Todolist", data);
+  }
+
+  Future<void> deleteTask(String id) async{
+    print("Inside addTask");
+    final response = await _api.deleteApi("https://69c19e25085e1a9fae417d33.mockapi.io/Todolist/$id");
+  }
+
 }
