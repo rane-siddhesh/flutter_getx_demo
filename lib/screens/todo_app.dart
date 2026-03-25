@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_demo/repo/to_do_repo.dart';
 
 class TodoApp extends StatelessWidget {
   const TodoApp({super.key});
@@ -36,6 +37,7 @@ class TodoApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ToDoRepo todoRepo = Get.put(ToDoRepo());
     return Scaffold(
       appBar: AppBar(title: Text("ToDo App")),
       floatingActionButton: FloatingActionButton(
@@ -59,20 +61,20 @@ class TodoApp extends StatelessWidget {
             SizedBox(height: 15),
             Expanded(
               child: ListView.builder(
-                itemCount: 15,
+                itemCount: 1,
                 itemBuilder: (context, index) {
-                  return Container(
+                  return Obx(() => Column(children: todoRepo.toDoList.map((e) => Container(
                     margin: EdgeInsets.symmetric(vertical: 5),
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                      color: Colors.deepPurple,
+                      color: Colors.purple,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Todo $index",
+                          e.title.toString(),
                           style: TextStyle(color: Colors.white),
                         ),
                         Row(
@@ -117,7 +119,7 @@ class TodoApp extends StatelessWidget {
                         ),
                       ],
                     ),
-                  );
+                  )).toList(),));
                 },
               ),
             ),
